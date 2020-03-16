@@ -11,7 +11,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between pivx-cli and pivxd)
- * of a given instance of the Pivx system.
+ * of a given instance of the PIVX system.
  */
 class CBaseChainParams
 {

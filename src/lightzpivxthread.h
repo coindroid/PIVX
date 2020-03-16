@@ -3,12 +3,12 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 //
 
-#ifndef PIVX_LIGHTZPIVTHREAD_H
-#define PIVX_LIGHTZPIVTHREAD_H
+#ifndef PIVX_LIGHTZQNCTHREAD_H
+#define PIVX_LIGHTZQNCTHREAD_H
 
 #include <atomic>
 #include "genwit.h"
-#include "zpiv/accumulators.h"
+#include "zpivx/accumulators.h"
 #include "concurrentqueue.h"
 #include "chainparams.h"
 #include <boost/function.hpp>
@@ -49,22 +49,22 @@ public:
         return true;
     }
 
-    void StartLightZpivThread(boost::thread_group& threadGroup) {
+    void StartLightZpivxThread(boost::thread_group& threadGroup) {
         LogPrintf("%s thread start\n", "pivx-light-thread");
-        threadIns = boost::thread(boost::bind(&CLightWorker::ThreadLightZPIVSimplified, this));
+        threadIns = boost::thread(boost::bind(&CLightWorker::ThreadLightZQNCSimplified, this));
     }
 
-    void StopLightZpivThread() {
+    void StopLightZpivxThread() {
         threadIns.interrupt();
         LogPrintf("%s thread interrupted\n", "pivx-light-thread");
     }
 
 private:
 
-    void ThreadLightZPIVSimplified();
+    void ThreadLightZQNCSimplified();
 
     void rejectWork(CGenWit& wit, int blockHeight, uint32_t errorNumber);
 
 };
 
-#endif //PIVX_LIGHTZPIVTHREAD_H
+#endif //PIVX_LIGHTZQNCTHREAD_H
