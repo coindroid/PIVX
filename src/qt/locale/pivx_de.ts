@@ -2716,7 +2716,7 @@ Bitte haben Sie etwas Geduld...</translation>
         <translation>Keine "Pay To"-Adresse zur Verfügung. Erstelle lokale Zahlung</translation>
     </message>
     <message>
-        <source>Invalid Pivx Address</source>
+        <source>Invalid PIVX Address</source>
         <translation>Ungültige PIVX-Adresse </translation>
     </message>
     <message>
@@ -4889,8 +4889,8 @@ Bitte haben Sie etwas Geduld...</translation>
         <translation>Sie müssen einen privaten Masternode-Schlüssel in der Konfiguration festlegen. Bitte nutzen Sie die Dokumentation zwecks Hilfe.</translation>
     </message>
     <message>
-        <source>(51472 could be used only on mainnet)</source>
-        <translation>(51472 kann nur im Mainnet verwendet werden)</translation>
+        <source>(17022 could be used only on mainnet)</source>
+        <translation>(17022 kann nur im Mainnet verwendet werden)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4901,8 +4901,8 @@ Bitte haben Sie etwas Geduld...</translation>
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 51472 for mainnet)</source>
-        <translation>(muss im Mainnet 51472 sein)</translation>
+        <source>(must be 17022 for mainnet)</source>
+        <translation>(muss im Mainnet 17022 sein)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
