@@ -1,0 +1,6 @@
+usr/local/bin/qnodecoin-qt usr/bin
+share/pixmaps/qnodecoin32.xpm usr/share/pixmaps
+share/pixmaps/qnodecoin16.xpm usr/share/pixmaps
+share/pixmaps/qnodecoin128.png usr/share/pixmaps
+debian/qnodecoin-qt.desktop usr/share/applications
+debian/qnodecoin-qt.protocol usr/share/kde4/services/

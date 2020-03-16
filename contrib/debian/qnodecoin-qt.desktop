@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=QnodeCoin Core
+Comment=QnodeCoin P2P Cryptocurrency
+Comment[fr]=QnodeCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=QnodeCoin, eşten eşe kriptografik sanal para birimi
+Exec=qnodecoin-qt %u
+Terminal=false
+Type=Application
+Icon=qnodecoin128
+MimeType=x-scheme-handler/qnodecoin;
+Categories=Office;Finance;
+StartupWMClass=QnodeCoin-qt

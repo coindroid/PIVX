@@ -1,0 +1,81 @@
+policy_module(qnodecoin, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type qnodecoin_t;
+type qnodecoin_exec_t;
+init_daemon_domain(qnodecoin_t, qnodecoin_exec_t)
+
+permissive qnodecoin_t;
+
+type qnodecoin_initrc_exec_t;
+init_script_file(qnodecoin_initrc_exec_t)
+
+type qnodecoin_conf_t;
+files_type(qnodecoin_conf_t)
+
+type qnodecoin_var_lib_t;
+files_type(qnodecoin_var_lib_t)
+
+type qnodecoin_var_run_t;
+files_type(qnodecoin_var_run_t)
+
+type qnodecoin_port_t;
+corenet_port(qnodecoin_port_t)
+
+########################################
+#
+# qnodecoin local policy
+#
+allow qnodecoin_t self:process { fork };
+
+allow qnodecoin_t self:fifo_file rw_fifo_file_perms;
+allow qnodecoin_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(qnodecoin_t, qnodecoin_conf_t, qnodecoin_conf_t)
+manage_files_pattern(qnodecoin_t, qnodecoin_conf_t, qnodecoin_conf_t)
+
+manage_dirs_pattern(qnodecoin_t, qnodecoin_var_lib_t, qnodecoin_var_lib_t)
+manage_files_pattern(qnodecoin_t, qnodecoin_var_lib_t, qnodecoin_var_lib_t)
+files_var_lib_filetrans(qnodecoin_t, qnodecoin_var_lib_t, { dir file })
+
+manage_dirs_pattern(qnodecoin_t, qnodecoin_var_run_t, qnodecoin_var_run_t)
+manage_files_pattern(qnodecoin_t, qnodecoin_var_run_t, qnodecoin_var_run_t)
+
+sysnet_dns_name_resolve(qnodecoin_t)
+corenet_all_recvfrom_unlabeled(qnodecoin_t)
+
+allow qnodecoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(qnodecoin_t)
+corenet_tcp_sendrecv_generic_node(qnodecoin_t)
+corenet_tcp_sendrecv_all_ports(qnodecoin_t)
+corenet_tcp_bind_generic_node(qnodecoin_t)
+
+gen_require(`
+    type qnodecoin_port_t;
+')
+allow qnodecoin_t qnodecoin_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type qnodecoin_port_t;
+')
+allow qnodecoin_t qnodecoin_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(qnodecoin_t)
+
+files_read_etc_files(qnodecoin_t)
+
+miscfiles_read_localization(qnodecoin_t)
+
+sysnet_dns_name_resolve(qnodecoin_t)
+
+allow qnodecoin_t qnodecoin_exec_t:file execute_no_trans;
+allow qnodecoin_t self:process setsched;
+corecmd_exec_ls(qnodecoin_t)
+corenet_tcp_connect_http_port(qnodecoin_t)
+dev_read_urand(qnodecoin_t)
+fs_getattr_xattr_fs(qnodecoin_t)
+kernel_read_system_state(qnodecoin_t)

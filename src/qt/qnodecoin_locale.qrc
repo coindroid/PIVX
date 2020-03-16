@@ -1,0 +1,37 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/qnodecoin_bg.qm</file>
+        <file alias="ca">locale/qnodecoin_ca.qm</file>
+        <file alias="cs">locale/qnodecoin_cs.qm</file>
+        <file alias="da">locale/qnodecoin_da.qm</file>
+        <file alias="de">locale/qnodecoin_de.qm</file>
+        <file alias="en">locale/qnodecoin_en.qm</file>
+        <file alias="en_GB">locale/qnodecoin_en_GB.qm</file>
+        <file alias="en_US">locale/qnodecoin_en_US.qm</file>
+        <file alias="eo">locale/qnodecoin_eo.qm</file>
+        <file alias="es">locale/qnodecoin_es.qm</file>
+        <file alias="es_ES">locale/qnodecoin_es_ES.qm</file>
+        <file alias="fi">locale/qnodecoin_fi.qm</file>
+        <file alias="fr_FR">locale/qnodecoin_fr_FR.qm</file>
+        <file alias="hi_IN">locale/qnodecoin_hi_IN.qm</file>
+        <file alias="hr">locale/qnodecoin_hr.qm</file>
+        <file alias="hr_HR">locale/qnodecoin_hr_HR.qm</file>
+        <file alias="it">locale/qnodecoin_it.qm</file>
+        <file alias="ja">locale/qnodecoin_ja.qm</file>
+        <file alias="ko_KR">locale/qnodecoin_ko_KR.qm</file>
+        <file alias="lt_LT">locale/qnodecoin_lt_LT.qm</file>
+        <file alias="nl">locale/qnodecoin_nl.qm</file>
+        <file alias="pl">locale/qnodecoin_pl.qm</file>
+        <file alias="pt">locale/qnodecoin_pt.qm</file>
+        <file alias="pt_BR">locale/qnodecoin_pt_BR.qm</file>
+        <file alias="ro_RO">locale/qnodecoin_ro_RO.qm</file>
+        <file alias="ru">locale/qnodecoin_ru.qm</file>
+        <file alias="sk">locale/qnodecoin_sk.qm</file>
+        <file alias="sv">locale/qnodecoin_sv.qm</file>
+        <file alias="tr">locale/qnodecoin_tr.qm</file>
+        <file alias="uk">locale/qnodecoin_uk.qm</file>
+        <file alias="vi">locale/qnodecoin_vi.qm</file>
+        <file alias="zh_CN">locale/qnodecoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/qnodecoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

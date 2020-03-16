@@ -1,0 +1,3 @@
+usr/local/bin/qnodecoind usr/bin
+usr/local/bin/qnodecoin-cli usr/bin
+debian/examples/qnodecoin.conf etc/qnodecoin

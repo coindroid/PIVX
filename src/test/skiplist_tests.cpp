@@ -6,7 +6,7 @@
 #include "main.h"
 #include "random.h"
 #include "util.h"
-#include "test/test_pivx.h"
+#include "test/test_qnodecoin.h"
 
 #include <vector>
 

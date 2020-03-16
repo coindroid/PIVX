@@ -1,0 +1,11 @@
+[Protocol]
+exec=qnodecoin-qt '%u'
+protocol=qnodecoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
